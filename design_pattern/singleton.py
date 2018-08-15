@@ -8,7 +8,7 @@ class Singleton(object):
 
 
 if __name__ == '__main__':
-    class SingleSpam(Singleton):
+    class SingleTest(Singleton):
         def __init__(self, s):
             self.s = s
 
@@ -16,8 +16,8 @@ if __name__ == '__main__':
             return self.s
 
 
-    s1 = SingleSpam('spam')
-    print(s1)
-    s2 = SingleSpam('spa')
-    print(s2)
-    print(s1)
+    test1 = SingleTest('Test')
+    print(test1)
+    test2 = SingleTest('ttttt')
+    print(test2)
+    print(test1)
