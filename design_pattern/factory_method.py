@@ -6,7 +6,15 @@ class Php:
         self.lan = lan
 
     def say(self):
-        return self.lan + '实现简单工厂模式'
+        return self.lan + ' 实现简单工厂模式。'
+
+
+class Java:
+    def __init__(self, lan):
+        self.lan = lan
+
+    def say(self):
+        return self.lan + ' 实现简单工厂模式。'
 
 
 class Python:
@@ -14,7 +22,7 @@ class Python:
         self.lan = lan
 
     def say(self):
-        return self.lan + '实现简单工厂模式'
+        return self.lan + ' 实现简单工厂模式。'
 
 
 class UnknowLan:
@@ -29,8 +37,13 @@ class Factory:
     def get_say(self):
         if self.language == 'php':
             return Php(self.language)
+
         elif self.language == 'python':
             return Python(self.language)
+
+        elif self.language == 'java':
+            return Java(self.language)
+
         else:
             return UnknowLan()
 
