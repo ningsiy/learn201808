@@ -53,7 +53,7 @@ class MeizuMobile(MobilePhone):
         print("这是用魅族16拍摄的照片！")
 
 
-# 具体产品 （小米耳机）
+# 具体产品 （魅族耳机）
 class MeizuEarPhone(EarPhone):
 
     def hear_song(self):
