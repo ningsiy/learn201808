@@ -19,5 +19,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('blog/', include('blog.urls')),
+
+    # Django 2.0 include() 中 namespace 的写法不同于之前的版本
+    path('blog/', include(('blog.urls', 'blog'), namespace='blog')),
 ]
