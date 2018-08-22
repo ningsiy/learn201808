@@ -64,7 +64,7 @@ class MeizuEarPhone(EarPhone):
 
 
 # 抽象工厂
-class AbstraFactory:
+class AbstractFactory:
 
     # 制造手机
     def produce_phone(self):
@@ -76,7 +76,7 @@ class AbstraFactory:
 
 
 # 具体工厂 （小米代工厂）
-class XiaomiFactory(AbstraFactory):
+class XiaomiFactory(AbstractFactory):
 
     def produce_phone(self):
         return XiaoMiMobile()
@@ -86,7 +86,7 @@ class XiaomiFactory(AbstraFactory):
 
 
 # 具体工厂 （魅族代工厂）
-class MeizuFactory(AbstraFactory):
+class MeizuFactory(AbstractFactory):
 
     def produce_phone(self):
         return MeizuMobile()
