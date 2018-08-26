@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Page</title>
+</head>
+<body>
+    <h3>在此撰写博客</h3>
+    <form action="{% url 'blog:edit_action' %}" method="post">
+
+        {% csrf_token %}  {#防范跨站请求伪造#}
+
+        {% if article %}
+            <input type="hidden" name="article_id" value="{{ article.id }}"/>
+            <label>文章标题
+                <input type="text" name="title" value="{{ article.title }}" />
+            </label>
+            <br />
+            <label>文章内容
+                <input type="text" name="content" value="{{ article.content }}" />
+            </label>
+            <br />
+        {% else %}
+            <input type="hidden" name="article_id" value="0"/>
+            <label>文章标题
+                <input type="text" name="title" value="{{ article.title }}" />
+            </label>
+            <br />
+            <label>文章内容
+                <input type="text" name="content" value="{{ article.content }}" />
+            </label>
+            <br />
+        {% endif %}
+        <input type="submit" />
+        <br />
+    </form>
+</body>
+</html>

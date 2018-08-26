@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1>
-        <a href="">新文章</a>
+        <a href="{% url 'blog:edit_page' 0 %}">新文章</a>
     </h1>
 
     {% for article in articles %}

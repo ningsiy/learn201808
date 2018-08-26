@@ -9,6 +9,10 @@
     <br/>
     <h3>{{ article.content }}</h3>
     <br/><br/>
-    <a href="">修改文章</a>
+    <a href="{% url 'blog:edit_page' article.id %}">修改文章</a>
+    <br />
+    <a href="{% url 'blog:index' %}">返回文章列表</a>
+    <br /><br />
+    <a href="{% url 'blog:delete_article' article.id %}" style="color: red">删除本篇文章</a>
 </body>
 </html>
