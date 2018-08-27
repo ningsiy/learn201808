@@ -25,7 +25,7 @@ class FingerprintUnlock(MobileUnlock):
 
 
 # 人脸解锁 (待适配类)
-class FaceUnlock(MobileUnlock):
+class FaceUnlock:
 
     def face_unlock(self):
         print("人脸解锁")
